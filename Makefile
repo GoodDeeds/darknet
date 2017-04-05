@@ -1,6 +1,6 @@
 GPU=1
 CUDNN=1
-OPENCV=1
+OPENCV=0
 DEBUG=0
 
 ARCH= -gencode arch=compute_20,code=[sm_20,sm_21] \
@@ -21,7 +21,7 @@ NVCC=nvcc
 OPTS=-Ofast
 LDFLAGS= -lm -pthread 
 COMMON= 
-CFLAGS=-Wall -Wfatal-errors 
+CFLAGS=-Wall -Wfatal-errors -g
 
 ifeq ($(DEBUG), 1) 
 OPTS=-O0 -g
