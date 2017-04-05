@@ -9,6 +9,8 @@
 #include "demo.h"
 #include <sys/time.h>
 
+#include "videoio_c.h"
+
 #define FRAMES 3
 
 #ifdef OPENCV

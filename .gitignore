@@ -24,3 +24,9 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+
+# For weights' files #
+*.weights
+
+# Temporary files #
+*~

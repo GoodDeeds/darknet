@@ -3,6 +3,8 @@
 #include "utils.h"
 #include "parser.h"
 
+#include "videoio_c.h"
+
 #ifdef OPENCV
 #include "opencv2/highgui/highgui_c.h"
 image get_image_from_stream(CvCapture *cap);
