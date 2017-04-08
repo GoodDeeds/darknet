@@ -15,6 +15,7 @@ convnet/
 decaf/
 submission/
 cfg/
+scripts/VOCdevkit
 darknet
 .fuse*
 
@@ -27,6 +28,7 @@ Thumbs.db
 
 # For weights' files #
 *.weights
+darknet19_448.conv.23
 
 # Temporary files #
 *~
