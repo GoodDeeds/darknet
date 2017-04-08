@@ -237,9 +237,9 @@ layer parse_region(list *options, size_params params)
     int coords = option_find_int(options, "coords", 4);
     int classes = option_find_int(options, "classes", 20);
     int num = option_find_int(options, "num", 1);
-
+	// function is from region_layer.c
     layer l = make_region_layer(params.batch, params.w, params.h, num, classes, coords);
-    printf("l.op : %d params.inp : %d \n", l.outputs, params.inputs);
+    printf("parser.c: 242: l.op : %d params.inp : %d \n", l.outputs, params.inputs);
     assert(l.outputs == params.inputs);
 
     l.log = option_find_int_quiet(options, "log", 0);

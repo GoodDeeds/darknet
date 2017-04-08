@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+// called from parser.c in parse_region function
 layer make_region_layer(int batch, int w, int h, int n, int classes, int coords)
 {
     layer l = {0};
@@ -23,8 +24,10 @@ layer make_region_layer(int batch, int w, int h, int n, int classes, int coords)
     l.cost = calloc(1, sizeof(float));
     l.biases = calloc(n*2, sizeof(float));
     l.bias_updates = calloc(n*2, sizeof(float));
+    //13*13*5*(80+4+1) = 71825
+    //this is not getting changed when layers are added, params.input is
     l.outputs = h*w*n*(classes + coords + 1);
-    printf("h : %d w : %d n : %d classes : %d coords : %d \n", l.h, l.w, l.n, classes, coords);
+    printf("region_layer.c : 27: h : %d w : %d n : %d classes : %d coords : %d \n", l.h, l.w, l.n, classes, coords);
     l.inputs = l.outputs;
     l.truths = 30*(5);
     l.delta = calloc(batch*l.outputs, sizeof(float));
